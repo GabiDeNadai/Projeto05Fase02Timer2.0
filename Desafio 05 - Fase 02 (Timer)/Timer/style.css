@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: white;
+
+  --bt-background-light: #E1E1E6;
+  --bt-background-dark: #02799D;
+
+  --text-color: #323238;
+  --svg-default-color: #323238;
+  --svg-active-color: white;
+
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+
+  font-family: 'Roboto', sans-serif;
+
+  display: grid;
+  min-height: 100vh;
+}
+
+main {
+  justify-self: center;
+  align-self: center;
+  display: grid;
+
+  grid-template-areas: "A B";
+  gap: 19.2rem;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  color: var(--text-color)
+}
+
+#timer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#time {
+  font-size: clamp(10rem, 10rem + 10vw, 12.5rem);
+  line-height: clamp(12rem, 12rem + 10vw, 14.8rem);
+  display: flex;
+}
+
+#controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+#controls button {
+  background-color: transparent;
+}
+
+#controls button:hover {
+  opacity: .7;
+}
+
+#sounds {
+  display: grid;
+  grid-template-areas: "A B"
+    "C D";
+  gap: 3.2rem;
+}
+
+#sounds button {
+  background-color: var(--bt-background-light);
+  border-radius: 24px;
+
+  width: 13.8rem;
+  height: 15.8rem;
+}
+
+#sounds button:hover {
+  scale: 1.1;
+}
+
+#sounds button.active {
+  background-color: var(--bt-background-dark);
+  color: var(--svg-active-color);
+}
+
